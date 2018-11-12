@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Gretchen/workspace/chinook/Chinook_Sqlite.sqlite" foreign_keys="1"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="4520"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="PlaylistTrack"/><default_encoding codec=""/><browsetable_info data="AAAAAwAAABoAUABsAGEAeQBsAGkAcwB0AFQAcgBhAGMAawAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8AAAAQAFAAbABhAHkAbABpAHMAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8AAAAKAEEAbABiAHUAbQAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8="/></tab_browse><tab_sql><sql name="exercise13.sql">select il.*, t.name, a.name 
+from track t, artist a, invoiceline  il
+	join track as t on il.trackid = t.trackid
+	join album as al on al.albumid = t.albumid
+	join artist as a on a.artistid = al.artistid
+	;
+</sql><sql name="exercise14.sql">select billingcountry, count(billingcountry) 
+from invoice
+group by billingcountry</sql><sql name="SQL 3"></sql><sql name="SQL 4">select pl. *, t.name, playlisttrackid
+from playlisttrack pl, track t
+group by PlaylistTrackid
+</sql><current_tab id="3"/></tab_sql></sqlb_project>
